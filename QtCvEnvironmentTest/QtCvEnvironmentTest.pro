@@ -14,14 +14,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #The config is based on MinGW
 #This is opencv include path
 #Notice:Only run on Windows
-INCLUDEPATH+=D:\opencv\OpenCV-MinGW-Build-OpenCV-4.1.1-x64\include
-#Add opencv lib files here
-#CONFIG(debug,debug|release):{
-#LIBS+=-LD:/opencv/build/x64/vc15/lib/opencv_world430d.lib
-#}else{
-#LIBS+=-LD:/opencv/build/x64/vc15/lib/opencv_world430.lib
-#}
-LIBS+=D:\\opencv\\OpenCV-MinGW-Build-OpenCV-4.1.1-x64\\x64\\mingw\\lib\\*.dll.a
+include(D:/opencv/oepncv430_MinGW_build/opencv430.pri)
 
 # You can also make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
