@@ -27,7 +27,7 @@ mingw32-make: *** [Makefile:179: all] Error 2
 	2.Problem linking shared library libopencv_core340.dll with MinGW 64
 ```javascript
 [ 41%] Linking CXX shared library ../../bin/libopencv_core340.dll
-C:/Rtools/mingw_64/bin/../lib/gcc/x86_64-w64-mingw32/4.9.3/../../../../x86_64-w64-mingw32/bin/ld.exe: i386 architecture of input file `CMakeFiles/opencv_core.dir/objects.a(vs_version.rc.obj)' is incompatible with i386:x86-64 output 
+C:../mingw_64/bin/../lib/gcc/x86_64-w64-mingw32/4.9.3/../../../../x86_64-w64-mingw32/bin/ld.exe: i386 architecture of input file `CMakeFiles/opencv_core.dir/objects.a(vs_version.rc.obj)' is incompatible with i386:x86-64 output 
 collect2.exe: error: ld returned 1 exit status 
 make[2]: *** [bin/libopencv_core340.dll] Error 1
 make[1]: *** [modules/core/CMakeFiles/opencv_core.dir/all] Error 2 
