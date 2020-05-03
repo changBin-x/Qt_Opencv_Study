@@ -2,7 +2,7 @@
 <br>To use  opencv4.3.0 in QT5.14.2,the source of opencv should be compiled fist.
 <br>While doing this, I met many annoying questions.So I want to take notes.
 ## Notice
-I compiled the sources on Windows¡Á64 platform.
+I compiled the sources on Windows10_x64 platform.
 <br>I do not recommend to compile the source code by self.Many strange errors could be met while building.
 <br>So I upload the compiled files so that opencv could used directly with QT. 
 ## Basic process.
