@@ -7,10 +7,10 @@ int main(int argc, char *argv[]) {
   //    MainWindow w;
   //    w.show();
 
-  Mat image = imread("D:\\opencv\\examples\\QtCvEnvironmentTest\\test.jpg");
-  imshow("First Test", image);
+  cv::Mat image = cv::imread("D:/opencv/examples/QtCvEnvironmentTest/test.jpg");
+  cv::imshow("First Test", image);
   //  cvNamedWindow("window", CV_WINDOW_NORMAL);
-  waitKey(0);
+  cv::waitKey(0);
   //  return a.exec();
   return 0;
 }
