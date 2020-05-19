@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/opencv/examples/cvSlam/CmakeTutorials/demo4/build/config.h
+
+D:/opencv/examples/cvSlam/CmakeTutorials/demo4/main.cc
+stdio.h
+-
+stdlib.h
+-
+build/config.h
+D:/opencv/examples/cvSlam/CmakeTutorials/demo4/build/config.h
+math/matFunctions.h
+D:/opencv/examples/cvSlam/CmakeTutorials/demo4/math/matFunctions.h
+math.h
+-
+
+D:/opencv/examples/cvSlam/CmakeTutorials/demo4/math/matFunctions.h
+
