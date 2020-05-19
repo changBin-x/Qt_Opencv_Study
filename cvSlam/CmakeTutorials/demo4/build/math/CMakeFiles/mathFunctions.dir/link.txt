@@ -1,2 +1,0 @@
-C:/mingw64/MinGW-8.1.0_64/bin/ar.exe qc libmathFunctions.a  CMakeFiles/mathFunctions.dir/mathFunctions.cc.obj
-C:/mingw64/MinGW-8.1.0_64/bin/ranlib.exe libmathFunctions.a

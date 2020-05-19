@@ -1,3 +1,0 @@
-D:/opencv/examples/cvSlam/CmakeTutorials/demo2/build/CMakeFiles/Demo2.dir
-D:/opencv/examples/cvSlam/CmakeTutorials/demo2/build/CMakeFiles/edit_cache.dir
-D:/opencv/examples/cvSlam/CmakeTutorials/demo2/build/CMakeFiles/rebuild_cache.dir
