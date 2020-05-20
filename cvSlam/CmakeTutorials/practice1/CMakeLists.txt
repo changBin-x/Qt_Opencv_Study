@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.10)
+project(practice1)
+aux_source_directory(. srcFiles)
+set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+message(STATUS "This is BINARY dir" ${PROJECT_BINARY_DIR})
+message(STATUS "This is SOURCE dir" ${PROJECT_SOURCE_DIR})
+add_executable(practice1 ${srcFiles})
