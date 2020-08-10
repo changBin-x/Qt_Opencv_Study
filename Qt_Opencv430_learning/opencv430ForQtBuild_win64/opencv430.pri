@@ -51,5 +51,4 @@ LIBS += -LD:/opencv/opencv430ForQtBuild_win64/bin -llibopencv_xfeatures2d430
 LIBS += -LD:/opencv/opencv430ForQtBuild_win64/bin -llibopencv_ximgproc430
 LIBS += -LD:/opencv/opencv430ForQtBuild_win64/bin -llibopencv_xobjdetect430
 LIBS += -LD:/opencv/opencv430ForQtBuild_win64/bin -llibopencv_xphoto430
-LIBS += -LD:/opencv/opencv430ForQtBuild_win64/bin -lopencv_videoio_ffmpeg
 LIBS += -LD:/opencv/opencv430ForQtBuild_win64/bin -lopencv_videoio_ffmpeg430_64

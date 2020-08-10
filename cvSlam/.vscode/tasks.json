@@ -5,25 +5,92 @@
     "tasks": [
         {
             "label": "opencv430 compile task",
-            "type": "shell",
+            // "type": "shell",
+            // "type": "process",
             "command": "C:\\Qt5.14.2\\Tools\\mingw730_64\\bin\\g++.exe",
             "args": [
-                "-g",
-                "${file}",
+                // "-g",
+                // "${file}",
+                "-O2",
+                // "-c",
                 "-o",
-                "${workspaceFolder}\\${fileBasenameNoExtension}.exe", // 设置动态链接库
+                "${workspaceFolder}\\${fileBasenameNoExtension}.exe",
                 "-I",
-                "E:\\computerVision\\OpencvStudy\\opencv430ForQtBuild_win64\\include",
+                "D:\\opencv\\opencv430ForQtBuild_win64\\bin\\include",
                 "-I",
-                "E:\\computerVision\\OpencvStudy\\opencv430ForQtBuild_win64\\opencv2",
-                "D:/opencv/opencv430ForQtBuild_win64/lib/libopencv_*.a"
+                "D:\\opencv\\opencv430ForQtBuild_win64\\bin\\opencv2",
+                "-L",
+                "D:\\opencv\\opencv430ForQtBuild_win64\\lib",
+                "-LD:\\opencv\\opencv430ForQtBuild_win64\\bin",
+                "-llibopencv_aruco430",
+                "-llibopencv_bgsegm430",
+                "-llibopencv_bioinspired430",
+                "-llibopencv_calib3d430",
+                "-llibopencv_ccalib430",
+                "-llibopencv_core430",
+                "-llibopencv_cvv430",
+                "-llibopencv_datasets430",
+                "-llibopencv_dnn_objdetect430",
+                "-llibopencv_dnn_superres430",
+                "-llibopencv_dnn430",
+                "-llibopencv_dpm430",
+                "-llibopencv_face430",
+                "-llibopencv_features2d430",
+                "-llibopencv_flann430",
+                "-llibopencv_fuzzy430",
+                "-llibopencv_gapi430",
+                "-llibopencv_hfs430",
+                "-llibopencv_highgui430",
+                "-llibopencv_img_hash430",
+                "-llibopencv_imgcodecs430",
+                "-llibopencv_imgproc430",
+                "-llibopencv_intensity_transform430",
+                "-llibopencv_line_descriptor430",
+                "-llibopencv_ml430",
+                "-llibopencv_objdetect430",
+                "-llibopencv_optflow430",
+                "-llibopencv_phase_unwrapping430",
+                "-llibopencv_photo430",
+                "-llibopencv_plot430",
+                "-llibopencv_quality430",
+                "-llibopencv_rapid430",
+                "-llibopencv_reg430",
+                "-llibopencv_saliency430",
+                "-llibopencv_shape430",
+                "-llibopencv_stereo430",
+                "-llibopencv_stitching430",
+                "-llibopencv_structured_light430",
+                "-llibopencv_superres430",
+                "-llibopencv_surface_matching430",
+                "-llibopencv_text430",
+                "-llibopencv_tracking430",
+                "-llibopencv_video430",
+                "-llibopencv_videoio430",
+                "-llibopencv_videostab430",
+                "-llibopencv_xfeatures2d430",
+                "-llibopencv_ximgproc430",
+                "-llibopencv_xobjdetect430",
+                "-llibopencv_xphoto430"
+                // "-lopencv_videoio_ffmpeg430_64"
             ], //编译命令参数
             "options": {
                 "cwd": "C:\\Qt5.14.2\\Tools\\mingw730_64\\bin"
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true
