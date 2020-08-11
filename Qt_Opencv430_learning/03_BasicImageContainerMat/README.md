@@ -48,7 +48,7 @@ Mat D (A, Rect(10, 10, 100, 100) ); // 使用矩形
 Mat E = A(Range::all(), Range(1,3)); // 使用行和列边界
 ```
 
-矩阵本身是否可能属于多个Mat对象，这些对象将在不再需要矩阵时负责清理矩阵。简短的答案是：使用它的最后一个对象。这是通过使用引用计数机制来处理的。每当有人复制Mat对象的标题时，矩阵的计数器就会增加。每当清理标题时，此计数器都会减少。当计数器达到零时，矩阵被释放。有时您也需要复制矩阵本身，因此OpenCV提供了cv :: Mat :: clone（）和cv :: Mat :: copyTo（）函数。
+矩阵本身是否可能属于多个Mat对象，这些对象将在不再需要矩阵时负责清理矩阵。简短的答案是：使用它的最后一个对象。这是通过使用引用计数机制来处理的。每当有人复制Mat对象的标题时，矩阵的计数器就会增加。每当清理标题时，此计数器都会减少。当计数器达到零时，矩阵被释放。有时您也需要复制矩阵本身，因此OpenCV提供了[cv :: Mat :: clone()](https://docs.opencv.org/4.3.0/d3/d63/classcv_1_1Mat.html#adff2ea98da45eae0833e73582dd4a660)和[cv :: Mat :: copyTo()](https://docs.opencv.org/4.3.0/d3/d63/classcv_1_1Mat.html#a33fd5d125b4c302b0c9aa86980791a77)函数。
 
 ```
 Mat F = A.clone();
@@ -61,7 +61,7 @@ A.copyTo(G);
 *  OpenCV函数输出的图像是自动分配空间的（除非另有说明）；
 *  使用C ++接口的OpenCV无需考虑进行内存管理；
 *  赋值运算符和复制构造方法仅复制标头;
-*  可以使用cv :: Mat :: clone（）和cv :: Mat :: copyTo（）函数复制图像的基础矩阵。
+*  可以使用[cv :: Mat :: clone()](https://docs.opencv.org/4.3.0/d3/d63/classcv_1_1Mat.html#adff2ea98da45eae0833e73582dd4a660)和[cv :: Mat :: copyTo()](https://docs.opencv.org/4.3.0/d3/d63/classcv_1_1Mat.html#a33fd5d125b4c302b0c9aa86980791a77)函数复制图像的基础矩阵。
 
 ## 存储方法
 
@@ -87,7 +87,7 @@ A.copyTo(G);
 在[“加载，修改和保存图像”](../02_LoadModifySaveAnImage/main.cpp)教程中，您已经学习了如何使用cv :: imwrite（）函数将矩阵写入图像文件。但是，出于调试目的，查看实际值要方便得多。您可以使用Mat的<<操作符执行此操作。请注意，这仅适用于二维矩阵。
 
 尽管Mat确实可以很好地用作图像容器，但它也是通用的矩阵类。因此，可以创建和操纵多维矩阵。您可以通过多种方式创建Mat对象：
-* cv :: Mat :: Mat构造函数
+* [cv :: Mat :: Mat](https://docs.opencv.org/4.3.0/d3/d63/classcv_1_1Mat.html#af1d014cecd1510cdf580bf2ed7e5aafc)构造函数
   ```
     Mat M(2,2, CV_8UC3, Scalar(0,0,255));
     cout << "M = " << endl << " " << M << endl << endl;
@@ -97,7 +97,7 @@ A.copyTo(G);
      ```
      CV_[每个项目的位数][有无符号][类型前缀]C[通道数]
      ```
-     例如，CV_8UC3表示我们使用8位长的无符号字符类型，每个像素都由其中的三个来形成三个通道。预定义了最多四个通道的类型。cv :: Scalar是四元素短向量。指定它，您可以使用自定义值初始化所有矩阵点。如果需要更多内容，可以使用上方的宏创建类型，在括号中设置通道号，如下所示。
+     例如，CV_8UC3表示我们使用8位长的无符号字符类型，每个像素都由其中的三个来形成三个通道。预定义了最多四个通道的类型。[cv :: Scalar](https://docs.opencv.org/4.3.0/dc/d84/group__core__basic.html#ga599fe92e910c027be274233eccad7beb)是四元素短向量。指定它，您可以使用自定义值初始化所有矩阵点。如果需要更多内容，可以使用上方的宏创建类型，在括号中设置通道号，如下所示。
 * 使用C / C ++数组并通过构造函数进行初始化
     ```
     int sz[3] = {2,2,2};
@@ -105,13 +105,13 @@ A.copyTo(G);
     ```
 
     上面的示例显示了如何创建一个二维以上的矩阵。指定其尺寸，然后传递一个包含每个尺寸大小的指针，其余的保持不变。
-* cv :: Mat :: create函数：
+* [cv :: Mat :: create](https://docs.opencv.org/4.3.0/d3/d63/classcv_1_1Mat.html#a55ced2c8d844d683ea9a725c60037ad0)函数：
     ```
       M.create(4,4, CV_8UC(2));
       cout << "M = "<< endl << " "  << M << endl << endl;
     ```
     您不能使用此构造函数初始化矩阵值。如果新的大小不适合旧的大小，它将仅重新分配其矩阵数据存储器。
-* MATLAB样式初始值设定项：cv :: Mat :: zeros，cv :: Mat :: ones，cv :: Mat :: eye。指定要使用的大小和数据类型：
+* MATLAB样式初始值设定项：[cv :: Mat :: zeros](https://docs.opencv.org/4.3.0/d3/d63/classcv_1_1Mat.html#a0b57b6a326c8876d944d188a46e0f556)，[cv :: Mat :: ones](https://docs.opencv.org/4.3.0/d3/d63/classcv_1_1Mat.html#a69ae0402d116fc9c71908d8508dc2f09)，[cv :: Mat :: eye](https://docs.opencv.org/4.3.0/d3/d63/classcv_1_1Mat.html#a2cf9b9acde7a9852542bbc20ef851ed2)。指定要使用的大小和数据类型：
   ```
     Mat E = Mat::eye(4, 4, CV_64F);
     cout << "E = " << endl << " " << E << endl << endl;
@@ -127,13 +127,13 @@ A.copyTo(G);
     C = (Mat_<double>({0, -1, 0, -1, 5, -1, 0, -1, 0})).reshape(3);
     cout << "C = " << endl << " " << C << endl << endl;
   ```
-* 为现有的Mat对象和cv :: Mat :: clone或cv :: Mat :: copyTo创建新的头部
+* 为现有的Mat对象和[cv :: Mat :: clone](https://docs.opencv.org/4.3.0/d3/d63/classcv_1_1Mat.html#adff2ea98da45eae0833e73582dd4a660)或[cv :: Mat :: copyTo](https://docs.opencv.org/4.3.0/d3/d63/classcv_1_1Mat.html#a33fd5d125b4c302b0c9aa86980791a77)创建新的头部
   ```
     Mat RowClone = C.row(1).clone();
     cout << "RowClone = " << endl << " " << RowClone << endl << endl;
   ```
     * 注意：
-        <br>可以使用cv :: randu（）函数用随机值填充矩阵，需要为随机值指定一个上限和下限：</br>
+        <br>可以使用[cv :: randu()](https://docs.opencv.org/4.3.0/d2/de8/group__core__array.html#ga1ba1026dca0807b27057ba6a49d258c0)函数用随机值填充矩阵，需要为随机值指定一个上限和下限：</br>
         ```
             Mat R = Mat(3, 2, CV_8UC3);
             randu(R, Scalar::all(0), Scalar::all(255));
