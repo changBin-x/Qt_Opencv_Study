@@ -1,6 +1,6 @@
 <!--
  * @Date: 2020-08-08 12:03:40
- * @LastEditTime: 2020-08-14 21:50:59
+ * @LastEditTime: 2020-08-14 21:59:31
  * @Author:  Chang_Bin
  * @LastEditors: Chang_Bin
  * @Email: bin_chang@qq.com
@@ -40,6 +40,6 @@
 如果觉得本项目对您有所帮助，如果您愿意，打赏一杯咖啡可好？:pray:
 
 <div align="center">
-<img style="align: center" src="beg.jpg" alt="" />
-跪着要饭:joy:
+<img style="align: center" src="beg.jpg" width="40%" height="40%" alt="" />
+<center>跪着要饭:joy:</center>
 </div>
