@@ -39,6 +39,6 @@
 # Last
 如果觉得本项目对您有所帮助，如果您愿意，打赏一杯咖啡可好？:pray:
 
-<div align="center">![an image][./beg.jpg] 跪着要饭:joy: </div>
+<div align="center">
 <img style="align: center" src="beg.jpg" width="40%" height="40%" alt="" />
-<center>跪着要饭:joy:</center>
+跪着要饭:joy: </div>
