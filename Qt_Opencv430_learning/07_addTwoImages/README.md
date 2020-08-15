@@ -1,6 +1,6 @@
 <!--
  * @Date: 2020-08-15 13:45:33
- * @LastEditTime: 2020-08-15 15:19:16
+ * @LastEditTime: 2020-08-15 15:21:26
  * @Author:  Chang_Bin
  * @LastEditors: Chang_Bin
  * @Email: bin_chang@qq.com
@@ -74,7 +74,7 @@ ui->graphicsView_img1->setScene(scene);
 ```
 因为[addWeighted()](https://docs.opencv.org/4.3.0/d2/de8/group__core__array.html#gafafb2513349db3bcff51f54ee5592a19)的原理为：
 
-$$dst = \alpha \cdot src1 + \beta \cdot src2 + \gamma$$
+<img align="center" src="https://latex.codecogs.com/gif.latex?dst&space;=&space;\alpha&space;\cdot&space;src1&space;&plus;&space;\beta&space;\cdot&space;src2&space;&plus;&space;\gamma" title="dst = \alpha \cdot src1 + \beta \cdot src2 + \gamma" />
 
 在这里，<img src="https://latex.codecogs.com/gif.latex?\gamma" title="\gamma" />在上面的代码中被设为0.0。
 
