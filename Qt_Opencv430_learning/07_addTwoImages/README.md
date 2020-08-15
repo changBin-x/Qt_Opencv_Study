@@ -1,6 +1,6 @@
 <!--
  * @Date: 2020-08-15 13:45:33
- * @LastEditTime: 2020-08-15 15:15:38
+ * @LastEditTime: 2020-08-15 15:19:16
  * @Author:  Chang_Bin
  * @LastEditors: Chang_Bin
  * @Email: bin_chang@qq.com
@@ -32,7 +32,7 @@
 <img src="https://latex.codecogs.com/gif.latex?g(x)&space;=&space;(1&space;-&space;\alpha)f_{0}(x)&space;&plus;&space;\alpha&space;f_{1}(x)" title="g(x) = (1 - \alpha)f_{0}(x) + \alpha f_{1}(x)" />
 
 
-我们需要两个源图像$f_{0}(x)$和$f_{1}(x)$。因此，我们以常见的方式加载它们：
+我们需要两个源图像<img src="https://latex.codecogs.com/gif.latex?f_{0}(x)" title="f_{0}(x)" />和<img src="https://latex.codecogs.com/gif.latex?f_{1}(x)" title="f_{1}(x)" />。因此，我们以常见的方式加载它们：
 ```
    src1 = imread( samples::findFile("LinuxLogo.jpg") );//这里的路径可能和自己的不一致
    src2 = imread( samples::findFile("WindowsLogo.jpg") );
@@ -67,7 +67,7 @@ ui->graphicsView_img1->setScene(scene);
 
     两个线性混合的图像src1和src2都必须具有相同的大小（宽度和高度）和类型。
 
-现在我们需要生成$g(x)$图像，使用功能[addWeighted()](https://docs.opencv.org/4.3.0/d2/de8/group__core__array.html#gafafb2513349db3bcff51f54ee5592a19)非常方便：
+现在我们需要生成<img src="https://latex.codecogs.com/gif.latex?g(x)" title="g(x)" />图像，使用功能[addWeighted()](https://docs.opencv.org/4.3.0/d2/de8/group__core__array.html#gafafb2513349db3bcff51f54ee5592a19)非常方便：
 ```
    beta = ( 1.0 - alpha );
    addWeighted( src1, alpha, src2, beta, 0.0, dst);
@@ -76,7 +76,7 @@ ui->graphicsView_img1->setScene(scene);
 
 $$dst = \alpha \cdot src1 + \beta \cdot src2 + \gamma$$
 
-在这里，$\gamma$在上面的代码中被设为0.0。
+在这里，<img src="https://latex.codecogs.com/gif.latex?\gamma" title="\gamma" />在上面的代码中被设为0.0。
 
 创建窗口，显示图像，然后等待用户结束程序。
 
