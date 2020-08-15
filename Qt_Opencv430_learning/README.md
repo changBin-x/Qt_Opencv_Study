@@ -31,6 +31,7 @@
 ### [04_扫描图像的方法](./04_scanImages/)
 ### [05_矩阵掩码操作](./05_MaskOperationsOnMatrices/)
 ### [06_图像操作](./06_operationsWithImages/)
+### [07_两图片线性合成](./07_addTwoImages/)
 
 
 
