@@ -1,6 +1,6 @@
 <!--
  * @Date: 2020-08-15 13:45:33
- * @LastEditTime: 2020-08-15 15:02:40
+ * @LastEditTime: 2020-08-15 15:15:38
  * @Author:  Chang_Bin
  * @LastEditors: Chang_Bin
  * @Email: bin_chang@qq.com
@@ -20,7 +20,8 @@
     以下说明属于Richard Szeliski撰写的《计算机视觉：算法和应用》一书
 
 从我们之前的教程中，我们已经了解了一些Pixel运算符。线性混合运算符是一个有趣的二元（双输入）运算符：
-$$g(x) = (1 - \alpha)f_{0}(x) + \alpha f_{1}(x)$$
+
+<img src="https://latex.codecogs.com/gif.latex?g(x)&space;=&space;(1&space;-&space;\alpha)f_{0}(x)&space;&plus;&space;\alpha&space;f_{1}(x)" title="g(x) = (1 - \alpha)f_{0}(x) + \alpha f_{1}(x)" />
 
 通过在0→1内改变α，该运算符可用于在两个图像或视频之间进行时间交叉混合，如幻灯片显示和电影制作（很酷，对吗？）
 
@@ -28,7 +29,7 @@ $$g(x) = (1 - \alpha)f_{0}(x) + \alpha f_{1}(x)$$
 
 由于我们要执行：
 
-$$g(x) = (1 - \alpha)f_{0}(x) + \alpha f_{1}(x)$$
+<img src="https://latex.codecogs.com/gif.latex?g(x)&space;=&space;(1&space;-&space;\alpha)f_{0}(x)&space;&plus;&space;\alpha&space;f_{1}(x)" title="g(x) = (1 - \alpha)f_{0}(x) + \alpha f_{1}(x)" />
 
 
 我们需要两个源图像$f_{0}(x)$和$f_{1}(x)$。因此，我们以常见的方式加载它们：
