@@ -1,8 +1,0 @@
-1，为工程添加一个子目录 src，用来存储源代码;
-2，添加一个子目录 doc，用来存储这个工程的文档 hello.txt
-3，在工程目录添加文本文件 COPYRIGHT, README；
-4，在工程目录添加一个 runhello.sh 脚本，用来调用 hello 二进制
-4，将构建后的目标文件放入构建目录的 bin 子目录；
-5，最终安装这些文件：将 hello 二进制与 runhello.sh 安装至/<prefix>/bin，将
-doc 目录中的 hello.txt 以及 COPYRIGHT/README 安装到
-/<prefix>/share/doc/cmake/t2

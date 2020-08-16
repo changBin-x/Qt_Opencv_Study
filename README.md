@@ -25,6 +25,7 @@
 ## [OpenCV概述](https://docs.opencv.org/4.3.0/df/d65/tutorial_table_of_content_introduction.html)
 ### [01_加载并显示图像](./01_LoadAndDisplayAnImage/)
 ### [02_加载/修改/保存图像](./02_LoadModifySaveAnImage/)
+01,02文件夹里面没有详细的README，因为比较简单，所以我把注解都放在代码之中
 
 ## [核心功能](https://docs.opencv.org/4.3.0/de/d7a/tutorial_table_of_content_core.html)
 ### [03_基础的图像容器Mat](./03_BasicImageContainerMat/)

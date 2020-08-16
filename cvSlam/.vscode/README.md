@@ -1,1 +1,0 @@
-This is a typical cv2 configuration in Vscode 

@@ -1,9 +1,0 @@
-cmake_minimum_required(VERSION 3.10)
-project(Demo2)
-# add_executable(Demo main.cpp mathFunctions.cpp)
-#使用 aux_source_directory 命令，该命令会查找指定目录下的所有源文件，
-#然后将结果存进指定变量名
-#aux_source_directory(<dir> <variable>)
-aux_source_directory(. DIR_SRCS)
-#指定生成目标
-add_executable(Demo2 ${DIR_SRCS})
