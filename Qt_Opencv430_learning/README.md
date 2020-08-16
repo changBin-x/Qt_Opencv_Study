@@ -1,6 +1,6 @@
 <!--
  * @Date: 2020-08-08 12:03:40
- * @LastEditTime: 2020-08-14 22:09:07
+ * @LastEditTime: 2020-08-16 16:56:29
  * @Author:  Chang_Bin
  * @LastEditors: Chang_Bin
  * @Email: bin_chang@qq.com
@@ -32,6 +32,7 @@
 ### [05_矩阵掩码操作](./05_MaskOperationsOnMatrices/)
 ### [06_图像操作](./06_operationsWithImages/)
 ### [07_两图片线性合成](./07_addTwoImages/)
+### [08_更改图像的对比度和亮度](./08_ChangeContrastAndBrightnessOfAnImage/)
 
 
 
