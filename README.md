@@ -1,6 +1,6 @@
 <!--
  * @Date: 2020-08-08 12:03:40
- * @LastEditTime: 2020-08-16 16:56:29
+ * @LastEditTime: 2020-08-16 17:22:35
  * @Author:  Chang_Bin
  * @LastEditors: Chang_Bin
  * @Email: bin_chang@qq.com
@@ -17,6 +17,11 @@
 
 以下的学习记录是以官方的opencv4.3.0(C++)[英文文档](https://docs.opencv.org/4.3.0/de/d7a/tutorial_table_of_content_core.html)为主，我在整理成中文的过程采用机翻+人工校准的方式，由于本人水平有限，所以难免会有错误，欢迎大家一起交流学习。
 
+在本项目中可以了解到：
+* Qt5的入门使用方法；
+* opencv4.0+的入门使用方法；
+* Qt5和opencv的联合开发方法；
+
 
 # 内容
 
@@ -32,6 +37,7 @@
 ### [04_扫描图像的方法](./04_scanImages/)
 ### [05_矩阵掩码操作](./05_MaskOperationsOnMatrices/)
 ### [06_图像操作](./06_operationsWithImages/)
+从这一部分开始，我们将会使用更加纯粹的Qt语句来对图像进行操作
 ### [07_两图片线性合成](./07_addTwoImages/)
 ### [08_更改图像的对比度和亮度](./08_ChangeContrastAndBrightnessOfAnImage/)
 
