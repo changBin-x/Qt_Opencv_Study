@@ -1,6 +1,6 @@
 <!--
  * @Date: 2020-08-08 12:03:40
- * @LastEditTime: 2020-08-16 17:22:35
+ * @LastEditTime: 2020-08-17 11:21:06
  * @Author:  Chang_Bin
  * @LastEditors: Chang_Bin
  * @Email: bin_chang@qq.com
@@ -40,6 +40,7 @@
 从这一部分开始，我们将会使用更加纯粹的Qt语句来对图像进行操作
 ### [07_两图片线性合成](./07_addTwoImages/)
 ### [08_更改图像的对比度和亮度](./08_ChangeContrastAndBrightnessOfAnImage/)
+### [09_傅里叶变换](./09_DiscreteFourierTransform/)
 
 
 
