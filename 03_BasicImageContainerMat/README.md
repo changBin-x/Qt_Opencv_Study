@@ -188,3 +188,202 @@ OpenCV也通过<<运算符支持其他常见OpenCV数据结构的输出：
   ```
 
 可以在[这里](./main.cpp)找到全部的例程,其来源于[官方例程](https://github.com/opencv/opencv/blob/master/samples/cpp/tutorial_code/core/mat_the_basic_image_container/mat_the_basic_image_container.cpp)
+
+## 补充
+* [Mat的type（类型）值](https://blog.csdn.net/fb_help/article/details/79855638?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param)
+  * 基本类型 
+    ```
+    #define CV_8U   0
+    #define CV_8S   1
+    #define CV_16U  2
+    #define CV_16S  3
+    #define CV_32S  4
+    #define CV_32F  5
+    #define CV_64F  6
+    #define CV_USRTYPE1 7
+    ```
+  * 常用矩阵类型总结
+
+    <div align="center">
+    <img src="./MatType.png">
+    </div>
+
+    其中C(k)表示有k个通道
+
+*  [QImage与cv::Mat互相转换-包括32F图像转换](https://blog.csdn.net/sinat_34774186/article/details/107930301)
+   *  cv::Mat转QImage(拷贝转换)
+      ```
+QImage cvMat2QImage(const cv::Mat& mat) 
+{
+	if (mat.empty())
+	{
+		return QImage();
+	}
+	QImage image;
+	switch (mat.type())
+	{
+	case CV_8UC1:
+	{
+		image = QImage((const uchar*)(mat.data),
+			mat.cols, mat.rows, mat.step,
+			QImage::Format_Grayscale8);
+		return image.copy();
+	}
+	case CV_8UC2:
+	{
+		mat.convertTo(mat, CV_8UC1);
+		image = QImage((const uchar*)(mat.data),
+			mat.cols, mat.rows, mat.step,
+			QImage::Format_Grayscale8);
+		return image.copy();
+	}
+	case CV_8UC3:
+	{
+		// Copy input Mat
+		const uchar *pSrc = (const uchar*)mat.data;
+		// Create QImage with same dimensions as input Mat
+		QImage image(pSrc, mat.cols, mat.rows, mat.step, QImage::Format_RGB888);
+		return image.rgbSwapped();
+	}
+	case CV_8UC4:
+	{
+		// Copy input Mat
+		const uchar *pSrc = (const uchar*)mat.data;
+		// Create QImage with same dimensions as input Mat
+		QImage image(pSrc, mat.cols, mat.rows, mat.step, QImage::Format_ARGB32);
+		return image.copy();
+	}
+	case CV_32FC1:
+	{
+		Mat normalize_mat;
+		normalize(mat, normalize_mat, 0, 255, NORM_MINMAX, -1);
+		normalize_mat.convertTo(normalize_mat, CV_8U);
+		const uchar *pSrc = (const uchar*)normalize_mat.data;
+		QImage image(pSrc, normalize_mat.cols, normalize_mat.rows, normalize_mat.step, QImage::Format_Grayscale8);
+		return image.copy();
+	}
+	case CV_32FC3:
+	{
+		Mat normalize_mat;
+		normalize(mat, normalize_mat, 0, 255, NORM_MINMAX,-1);
+		normalize_mat.convertTo(normalize_mat, CV_8U);
+		const uchar *pSrc = (const uchar*)normalize_mat.data;
+		// Create QImage with same dimensions as input Mat
+		QImage image(pSrc, normalize_mat.cols, normalize_mat.rows, normalize_mat.step, QImage::Format_RGB888);
+		return image.rgbSwapped();
+	}
+	case CV_64FC1:
+	{
+		Mat normalize_mat;
+		normalize(mat, normalize_mat, 0, 255, NORM_MINMAX, -1);
+		normalize_mat.convertTo(normalize_mat, CV_8U);
+		const uchar *pSrc = (const uchar*)normalize_mat.data;
+		QImage image(pSrc, normalize_mat.cols, normalize_mat.rows, normalize_mat.step, QImage::Format_Grayscale8);
+		return image.copy();
+	}
+	case CV_64FC3:
+	{
+		Mat normalize_mat;
+		normalize(mat, normalize_mat, 0, 255, NORM_MINMAX, -1);
+		normalize_mat.convertTo(normalize_mat, CV_8U);
+		const uchar *pSrc = (const uchar*)normalize_mat.data;
+		// Create QImage with same dimensions as input Mat
+		QImage image(pSrc, normalize_mat.cols, normalize_mat.rows, normalize_mat.step, QImage::Format_RGB888);
+		return image.rgbSwapped();
+	}
+	case CV_32SC1:
+	{
+		Mat normalize_mat;
+		normalize(mat, normalize_mat, 0, 255, NORM_MINMAX, -1);
+		normalize_mat.convertTo(normalize_mat, CV_8U);
+		const uchar *pSrc = (const uchar*)normalize_mat.data;
+		QImage image(pSrc, normalize_mat.cols, normalize_mat.rows, normalize_mat.step, QImage::Format_Grayscale8);
+		return image.copy();
+	}
+	case CV_32SC3:
+	{
+		Mat normalize_mat;
+		normalize(mat, normalize_mat, 0, 255, NORM_MINMAX, -1);
+		normalize_mat.convertTo(normalize_mat, CV_8U);
+		const uchar *pSrc = (const uchar*)normalize_mat.data;
+		// Create QImage with same dimensions as input Mat
+		QImage image(pSrc, normalize_mat.cols, normalize_mat.rows, normalize_mat.step, QImage::Format_RGB888);
+		return image.rgbSwapped();
+	}
+	case CV_16SC1:
+	{
+		Mat normalize_mat;
+		normalize(mat, normalize_mat, 0, 255, NORM_MINMAX, -1);
+		normalize_mat.convertTo(normalize_mat, CV_8U);
+		const uchar *pSrc = (const uchar*)normalize_mat.data;
+		QImage image(pSrc, normalize_mat.cols, normalize_mat.rows, normalize_mat.step, QImage::Format_Grayscale8);
+		return image.copy();
+	}
+	case CV_16SC3:
+	{
+		Mat normalize_mat;
+		normalize(mat, normalize_mat, 0, 255, NORM_MINMAX, -1);
+		normalize_mat.convertTo(normalize_mat, CV_8U);
+		const uchar *pSrc = (const uchar*)normalize_mat.data;
+		// Create QImage with same dimensions as input Mat
+		QImage image(pSrc, normalize_mat.cols, normalize_mat.rows, normalize_mat.step, QImage::Format_RGB888);
+		return image.rgbSwapped();
+	}
+	case CV_8SC1:
+	{
+		//Mat normalize_mat;
+		//normalize(mat, normalize_mat, 0, 255, NORM_MINMAX, -1);
+		mat.convertTo(mat, CV_8U);
+		const uchar *pSrc = (const uchar*)mat.data;
+		QImage image(pSrc, mat.cols, mat.rows, mat.step, QImage::Format_Grayscale8);
+		return image.copy();
+	}
+	case CV_8SC3:
+	{
+		mat.convertTo(mat, CV_8U);
+		const uchar *pSrc = (const uchar*)mat.data;
+		QImage image(pSrc, mat.cols, mat.rows, mat.step, QImage::Format_RGB888);
+		return image.rgbSwapped();
+	}
+	default:
+		mat.convertTo(mat, CV_8UC3);
+		QImage image((const uchar*)mat.data, mat.cols, mat.rows, mat.step, QImage::Format_RGB888);
+		return image.rgbSwapped();
+		return QImage();
+		break;
+	}
+}
+      ```
+
+   * QImage转cv::Mat(共享内存的转换)
+  ```
+  cv::Mat QImage2cvMat(QImage& image)
+{
+	cv::Mat mat;
+	//qDebug() << image.format();
+	switch (image.format())
+	{
+	case QImage::Format_ARGB32:
+		mat = cv::Mat(image.height(), image.width(), CV_8UC4, (void*)image.constBits(), image.bytesPerLine());
+		break;
+	case QImage::Format_RGB32:
+		mat = cv::Mat(image.height(), image.width(), CV_8UC3, (void*)image.constBits(), image.bytesPerLine());
+		//cv::cvtColor(mat, mat, CV_BGR2RGB);
+		break;
+	case QImage::Format_ARGB32_Premultiplied:
+		mat = cv::Mat(image.height(), image.width(), CV_8UC4, (void*)image.constBits(), image.bytesPerLine());
+		break;
+	case QImage::Format_RGB888:
+		mat = cv::Mat(image.height(), image.width(), CV_8UC3, (void*)image.constBits(), image.bytesPerLine());
+		//cv::cvtColor(mat, mat, CV_BGR2RGB);
+		break;
+	case QImage::Format_Indexed8:
+		mat = cv::Mat(image.height(), image.width(), CV_8UC1, (void*)image.constBits(), image.bytesPerLine());
+		break;
+	case QImage::Format_Grayscale8:
+		mat = cv::Mat(image.height(), image.width(), CV_8UC1, (void*)image.constBits(), image.bytesPerLine());
+		break;
+	}
+	return mat;
+}
+  ```
