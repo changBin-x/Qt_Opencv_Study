@@ -1,6 +1,6 @@
 <!--
  * @Date: 2020-08-08 12:03:40
- * @LastEditTime: 2020-08-17 11:21:06
+ * @LastEditTime: 2020-08-18 21:36:38
  * @Author:  Chang_Bin
  * @LastEditors: Chang_Bin
  * @Email: bin_chang@qq.com
@@ -41,6 +41,7 @@
 ### [07_两图片线性合成](./07_addTwoImages/)
 ### [08_更改图像的对比度和亮度](./08_ChangeContrastAndBrightnessOfAnImage/)
 ### [09_傅里叶变换](./09_DiscreteFourierTransform/)
+### [10_使用XML和YAML文件的文件输入和输出](./10_FileInputOutputUsingXMLAndYAML/)
 
 
 
