@@ -1,6 +1,6 @@
 <!--
  * @Date: 2020-08-08 12:03:40
- * @LastEditTime: 2020-08-20 15:14:06
+ * @LastEditTime: 2020-08-21 17:13:23
  * @Author:  Chang_Bin
  * @LastEditors: Chang_Bin
  * @Email: bin_chang@qq.com
@@ -46,6 +46,7 @@
 
 ## [图像处理（imgproc模块）](https://docs.opencv.org/4.3.0/d7/da8/tutorial_table_of_content_imgproc.html)
 ### [12_基础绘图](12_BasicDrawing/)
+### [13_opencv中的随机生成数和文本器](./13_RandomGeneratorAndText/)
 
 
 
