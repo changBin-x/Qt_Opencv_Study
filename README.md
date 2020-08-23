@@ -1,6 +1,6 @@
 <!--
  * @Date: 2020-08-08 12:03:40
- * @LastEditTime: 2020-08-21 17:13:23
+ * @LastEditTime: 2020-08-23 15:44:17
  * @Author:  Chang_Bin
  * @LastEditors: Chang_Bin
  * @Email: bin_chang@qq.com
@@ -46,8 +46,9 @@
 
 ## [图像处理（imgproc模块）](https://docs.opencv.org/4.3.0/d7/da8/tutorial_table_of_content_imgproc.html)
 ### [12_基础绘图](12_BasicDrawing/)
-### [13_opencv中的随机生成数和文本器](./13_RandomGeneratorAndText/)
-
+### [13_opencv中的随机数生成器和文本生成器](./13_RandomGeneratorAndText/)
+### [14_图像平滑(模糊)操作](./14_smoothImages)
+### [15_图像的腐蚀和膨胀操作](./15_erodingDilating/)
 
 
 
@@ -59,4 +60,4 @@
 <div align="center">
 <img style="align: center" src="beg.jpg" width="40%" height="40%" alt="" />
 <div align=center>跪着要饭:joy: </div>
-  </div>
+</div>
