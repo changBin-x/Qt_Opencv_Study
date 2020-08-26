@@ -26,19 +26,19 @@
 
 <div align="center">
 <img src="./pictures/hitmiss_kernels.png">
-结构元素（内核）。左：内核“命中”。中：内核为“未命中”。右：最终组合内核
+<div align=center>结构元素（内核）。左：内核“命中”。中：内核为“未命中”。右：最终组合内核 </div>
 </div>
 
 在这种情况下，我们正在寻找一种模式，其中中心像素属于背景，而北，南，东和西像素属于前景。邻域中的其余像素可以是任何一种，我们不关心这些。现在，让我们将此内核应用于输入图像：
 
 <div align="center">
 <img src="./pictures/hitmiss_input.png">
-输入的二进制图
+<div align=center>输入的二进制图 </div>
 </div>
 
 <div align="center">
 <img src="./pictures/hitmiss_output.png">
-输出的二进制图
+<div align=center>输出的二进制图 </div>
 </div>
 
 您可以看到仅在图像中的一个位置找到了图案。
