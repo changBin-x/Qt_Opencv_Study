@@ -1,6 +1,6 @@
 <!--
  * @Date: 2020-08-08 12:03:40
- * @LastEditTime: 2020-08-26 20:07:13
+ * @LastEditTime: 2020-08-26 20:09:26
  * @Author:  Chang_Bin
  * @LastEditors: Chang_Bin
  * @Email: bin_chang@qq.com
@@ -49,7 +49,7 @@
 ### [13_opencv中的随机数生成器和文本生成器](./13_RandomGeneratorAndText/)
 ### [14_图像平滑(模糊)操作](./14_smoothImages)
 ### [15_图像的腐蚀和膨胀操作](./15_erodingDilating/)
-### [16_更多图形变换操作]
+### [16_更多图形变换操作](./16_MoreMorphologyTransformations/)
 ### [17_击中击不中变换](./17_Hit-or-Miss/)
 
 # Last
