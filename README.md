@@ -1,6 +1,6 @@
 <!--
  * @Date: 2020-08-08 12:03:40
- * @LastEditTime: 2020-08-27 17:24:39
+ * @LastEditTime: 2020-08-28 20:57:15
  * @Author:  Chang_Bin
  * @LastEditors: Chang_Bin
  * @Email: bin_chang@qq.com
@@ -52,6 +52,7 @@
 ### [16_更多图形变换操作](./16_MoreMorphologyTransformations/)
 ### [17_击中击不中变换](./17_Hit-or-Miss/)
 ### [18_通过形态学操作提取水平线和垂直线](./18_ExtractHorizontalVerticalLines/)
+### [19_图像金字塔](./19_ImagePyramids/)
 
 # Last
 如果觉得本项目对您有所帮助，点一下star吧。
