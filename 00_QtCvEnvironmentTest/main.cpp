@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
   //    MainWindow w;
   //    w.show();
 
-  cv::Mat image = cv::imread("D:/opencv/examples/QtCvEnvironmentTest/test.jpg");
+  cv::Mat image = cv::imread("../../opencv430ForQtBuild_win64/data/notes.png");
   cv::imshow("First Test", image);
   //  cvNamedWindow("window", CV_WINDOW_NORMAL);
   cv::waitKey(0);
